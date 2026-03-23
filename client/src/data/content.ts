@@ -174,3 +174,23 @@ export const eventsGallery = [
   { title: "University Fest", image: images.universityFest },
   { title: "Sports Meet", image: images.collegeOutdoor },
 ];
+
+// ---- VAPI FORM CONTENT ----
+export const vapiFormContent = {
+  courses: [
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electronics & Communication",
+    "B.Tech Mechanical Engineering", 
+    "B.Tech Civil Engineering",
+    "MBA Tech Management",
+    "M.Tech Data Science & Analytics"
+  ],
+  topics: [
+    "Admission Process & Requirements",
+    "Fee Structure & Scholarships",
+    "Course Curriculum & Details",
+    "Placement Statistics & Companies",
+    "Campus Facilities & Hostels",
+    "Faculty & Research Programs"
+  ]
+};

@@ -2,11 +2,15 @@ import mongoose from "mongoose";
 
 const connectDB = async (): Promise<void> => {
   try {
-    const mongoURI = process.env.MONGODB_URI;
-
+    // Try local MongoDB first, fallback to Atlas
+    let mongoURI = process.env.MONGODB_URI;
+    
     if (!mongoURI) {
-      console.warn("⚠️  MONGODB_URI is not defined in environment variables");
-      return;
+      // Use local MongoDB for development
+      mongoURI = "mongodb://localhost:27017/edureach_db";
+      console.log("🔧 Using local MongoDB for development");
+    } else {
+      console.log("🌐 Using MongoDB Atlas from environment");
     }
 
     const conn = await mongoose.connect(mongoURI);
